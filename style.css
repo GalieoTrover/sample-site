@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* :root {
+  --margin: 0.5em;
+  --display: grid;
+  --height: 100vh;
+  --grid-gap: 1em;
+} */
+
+.container {
+  margin: 0.5em;
+  display: grid;
+  height: 100vh;
+  grid-gap: 1em;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: 0.2fr 1fr 0.3fr;
+  grid-template-areas:
+    "navbar navbar navbar"
+    "sidebar content-block-1 content-block-2"
+    "sidebar footer footer";
+}
+
+.portfolio {
+  margin: 0.5em;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr 0.3fr;
+  grid-gap: 1em;
+  grid-template-areas:
+    "navbar navbar"
+    "sidebar content-block-1"
+    "sidebar footer";
+}
+
+.items {
+  border: 2px solid black;
+  background: #eaeaea;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: center;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  padding: 1em;
+}
+
+a {
+  display: inline-block;
+  padding: 1em;
+  color: black;
+  list-style: none;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: blue;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  min-width: 299px;
+  top: 50;
+  /* bottom: 0; */
+  left: 100;
+  /* right: 0; */
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #008cba;
+}
+
+.post:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+footer {
+  border: 2px solid black;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#navbar {
+  grid-area: navbar;
+}
+
+#sidebar {
+  grid-area: sidebar;
+}
+
+#content-block-1 {
+  grid-area: content-block-1;
+}
+
+#content-block-2 {
+  grid-area: content-block-2;
+}
+
+#footer {
+  grid-area: footer;
+}
+
+@media (max-width: 550px) {
+  .container,
+  .portfolio {
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 0.2fr 1fr 0.3fr;
+    grid-template-rows: repeat(5, 1fr); */
+    grid-row-gap: 1em;
+    grid-template-rows: 0.5fr 1fr 2fr 2fr 1fr;
+    /* grid-gap: 0; */
+    grid-template-areas:
+      "navbar"
+      "sidebar"
+      "content-block-1"
+      "content-block-2"
+      "footer";
+  }
+}
