@@ -16,10 +16,11 @@ body {
   height: 100vh;
   grid-gap: 1em;
   grid-template-columns: 1fr 2fr 2fr;
-  grid-template-rows: 0.2fr 1fr 0.3fr;
+  grid-template-rows: 0.2fr 1fr 1fr 0.3fr;
   grid-template-areas:
     "navbar navbar navbar"
-    "sidebar content-block-1 content-block-2"
+    "sidebar content-block-1 content-block-1"
+    "sidebar content-block-2 content-block-2"
     "sidebar footer footer";
 }
 
@@ -35,6 +36,20 @@ body {
     "sidebar content-block-1"
     "sidebar footer";
 }
+
+.blog-items {
+  display: grid;
+  margin: 0.5em;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 1em;
+  /* justify-content: center; */
+}
+
+/* .blog-image {
+  width: 100%;
+  height: auto;
+} */
 
 .items {
   border: 2px solid black;
