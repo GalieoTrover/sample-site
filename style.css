@@ -268,9 +268,9 @@ span {
   color: white;
 }
 
-/* #navbar {
+#navbar {
   grid-area: navbar;
-} */
+}
 
 #sidebar {
   grid-area: sidebar;
