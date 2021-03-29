@@ -10,17 +10,21 @@
   </head>
   <body>
     <div class="container">
-      <nav class="items" id="navbar">
-        <a href="index.html"><img class="logo" src="images/logo.png"></a>
-        <br><br>
-        <ul>
-          <div class="nav-items">
-            <a href="index.html"><li>Home</li></a>
-            <a href="portfolio.html"><li>Portfolio</li></a>
-            <a href="firm.html"><li>Firm</li></a>
-            <a href="connect.html" class="selected"><li>Connect</li></a>
-          </div>
-        </ul>
+      <nav class="navbar">
+        <img src="images/logo.png" class="logo">
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="firm.html">Firm</a></li>
+            <li><a href="connect.html" class="selected">Connect</a></li>
+          </ul>
+        </div>
       </nav>
       <div class="items" id="content-block-1">
         <div class="contact-intro">
@@ -56,5 +60,6 @@
       </div>
       </footer>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
