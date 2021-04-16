@@ -21,7 +21,7 @@ const firmSec = document.querySelector('#firm-section');
 const connSec = document.querySelector('#connect-section');
 
 scrollTop.addEventListener('click', () =>
-	topSec.scrollIntoView({ behavior: 'smooth', alignToTop: true })
+	topSec.scrollIntoView({ behavior: 'smooth' })
 );
 
 scrollServ.addEventListener('click', () =>
@@ -33,12 +33,7 @@ learnmoreBtn.addEventListener('click', () =>
 );
 
 scrollPort.addEventListener('click', () =>
-	portSec.scrollIntoView({
-		behavior: 'smooth',
-		alignToTop: 'true',
-		// block: 'start',
-		inline: 'start',
-	})
+	portSec.scrollIntoView({ behavior: 'smooth' })
 );
 
 scrollFirm.addEventListener('click', () =>
