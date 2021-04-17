@@ -68,22 +68,28 @@ scrollConn.addEventListener('click', () =>
 // });
 
 // Modal window on click
-const modalWindow = document.querySelector('.modal-window');
+const blogItems = document.querySelector('.blog-items-2');
 const showModal = document.querySelectorAll('.show-modal');
-const closeBtn = document.querySelector('.close-modal');
+const modalWindow = document.querySelectorAll('.modal-window');
+const closeBtn = document.querySelectorAll('.close-modal');
 const overlay = document.querySelector('.overlay');
 
-showModal.forEach((element) => {
-	element.addEventListener('click', () => {
-		modalWindow.classList.remove('hidden');
-		overlay.classList.remove('hidden');
-	});
+blogItems.addEventListener('click', (e) => {
+	const clicked = e.target.closest('.show-modal');
+	if (!clicked) return;
+
+	overlay.classList.remove('hidden');
+	document
+		.querySelector(`.modal-window-${clicked.dataset.set}`)
+		.classList.remove('hidden');
 });
 
-closeBtn.addEventListener('click', () => {
-	overlay.classList.add('hidden');
-	modalWindow.classList.add('hidden');
-});
+closeBtn.forEach((btn) =>
+	btn.addEventListener('click', () => {
+		overlay.classList.add('hidden');
+		modalWindow.forEach((el) => el.classList.add('hidden'));
+	})
+);
 
 // Shrink navbar on scroll
 window.onscroll = function () {
