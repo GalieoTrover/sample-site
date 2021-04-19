@@ -487,9 +487,13 @@ footer .social-links {
 		height: 100%;
 	}
 
-	.nav-items a {
-		margin: 1.5px;
+	.splash-container .splash-text .learn-more {
+		margin-right: 1rem;
 	}
+
+	/* .nav-items a {
+		margin: 1.5px;
+	} */
 
 	.blog-items-2 {
 		flex-wrap: wrap;
@@ -514,6 +518,9 @@ footer .social-links {
 	.firm-blog-items .firm-blog-item {
 		width: 250px;
 		height: 250px;
+		margin-right: auto;
+		margin-left: auto;
+		padding-left: 1rem;
 	}
 
 	footer {
