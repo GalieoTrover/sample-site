@@ -431,6 +431,11 @@ footer .social-links {
 		font-size: 14px;
 	}
 
+	.splash-container .splash-text {
+		align-items: center;
+		/* justify-content: center; */
+	}
+
 	.company-title {
 		font-size: 1.5rem;
 		padding: 0.5rem;
