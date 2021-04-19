@@ -433,6 +433,7 @@ footer .social-links {
 
 	.splash-container .splash-text {
 		align-items: center;
+		padding: 0 1rem;
 		/* justify-content: center; */
 	}
 
@@ -491,7 +492,6 @@ footer .social-links {
 	}
 
 	.blog-items-2 {
-		/* flex-shrink: ; */
 		flex-wrap: wrap;
 	}
 
@@ -501,12 +501,19 @@ footer .social-links {
 
 	.posts {
 		grid-template-columns: 320px;
-		grid-template-rows: repeat(9, 320px);
+		grid-template-rows: repeat(9, 270px);
 	}
 
 	.firm-blog-items {
 		grid-template-columns: 320px;
-		grid-template-rows: repeat(6, 320px);
+		grid-template-rows: repeat(6, 270px);
+	}
+
+	.blog-items-2 .blog-item .show-modal,
+	.posts .post,
+	.firm-blog-items .firm-blog-item {
+		width: 250px;
+		height: 250px;
 	}
 
 	footer {
