@@ -6,6 +6,14 @@ toggleButton.addEventListener('click', () => {
 	navbarLinks.classList.toggle('active');
 });
 
+// Close navbar after clicking a link
+const navLinks = document.querySelectorAll('.nav__links');
+navLinks.forEach(function (link) {
+	link.addEventListener('click', () => {
+		navbarLinks.classList.remove('active');
+	});
+});
+
 // Scroll to different sections of the page
 const scrollTop = document.querySelector('.scroll-top');
 const scrollServ = document.querySelector('.scroll-serv');
